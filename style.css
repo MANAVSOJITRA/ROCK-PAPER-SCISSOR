@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body , html {
+    height: 100vh;
+    width: 100vw;   
+    background: #f7f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 69vh;
+    width: 40vw;
+    background-color: #eeeeee;
+    flex-direction: column;
+    box-shadow: 8px 5px 10px  rgba(0, 0, 0, 0.2);
+    border-radius: 9px;
+    gap: 4rem;
+}
+.result-images{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 23vh;
+    width: 25vw;
+}
+.result-images img{
+    height: 160px;
+    width: 160px;
+    border-radius:50% ;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+
+}
+.result-images div{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.main.start .user-img img{
+    transform: scaleX(-1);
+    rotate: 90deg;
+    animation: usersake 1.4s ease  infinite ; 
+    transition: all 0.2s ease;
+    
+}
+.user-img img{
+    transform: scaleX(-1);
+    rotate: 90deg;
+}
+
+.computer-img img{
+    rotate: -90deg;
+}
+.main.start .computer-img img{
+animation: cpusake 1.4s ease  infinite; 
+}
+.result-images{
+    font-size: 1.5rem;
+    font-weight:600;  
+}
+.result-text{
+    font-size: 2.5rem;
+    font-weight:800;
+    color: rgb(56, 54, 54);
+}
+.choices{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.choices img{
+    height: 120px;
+    width: 120px;
+    border-radius:50% ;
+    box-shadow: 8px 5px 10px  rgba(0, 0, 0, 0.3);
+}
+.choice{
+    opacity: 0.6;
+    transition: opacity 0.2s ease;
+}
+.choice:hover{
+    opacity: 1;
+}
+.choice.active{
+    opacity: 1;
+}
+@keyframes usersake{
+    50%{
+        transform-origin: bottom;
+    }
+}
+@keyframes cpusake{
+    50%{
+        transform-origin: bottom;
+    }
+}
+.main.start .choice{
+    pointer-events: none;
+}
+.lasttext1,.lasttext2{
+  display: none;
+  color: rgb(46, 42, 42);
+
+}
