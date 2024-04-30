@@ -17,10 +17,10 @@ Array.from(choices).forEach( (e,index1) => {
                 }
             }),
         document.querySelector(".main").classList.add("start"),  
-        e.classList.add("active"),         
-        userchoice = (e.classList[0]) ,
-        compchoice = wins[randomnum][0] ,
+        e.classList.add("active"),          
         randomnum = (Math.floor(Math.random()*3)),
+        compchoice = wins[randomnum][0] ,
+        userchoice = (e.classList[0]) ,
         document.querySelector(".result-text").innerHTML = "wait.."  ,
         setTimeout(() => {
             document.querySelector(".main").classList.remove("start")
